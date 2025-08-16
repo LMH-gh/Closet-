@@ -7,9 +7,39 @@ if (!process.env.API_KEY) {
 }
 
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const textModel = 'gemini-2.5-flash';
+const imageModel = 'imagen-3.0-generate-002';
 
-export const generateOutfit = async (params: OutfitGenerationParams): Promise<OutfitResult> => {
-  // Step 1: Generate a detailed text description of the outfit.
+const translateText = async (text: string, targetLanguage: string): Promise<string> => {
+  if (!text) return "";
+  const langMap: { [key: string]: string } = {
+      'zh': 'Chinese (Simplified)',
+      'fr': 'French',
+      'de': 'German',
+      'ja': 'Japanese',
+      'ko': 'Korean',
+      'ru': 'Russian',
+  };
+  const targetLangName = langMap[targetLanguage] || 'English';
+
+  const prompt = `Translate the following fashion outfit description to ${targetLangName}. Keep the tone stylish and descriptive. Do not add any extra text or pleasantries, just the translation.\n\nDescription:\n"${text}"`;
+
+  try {
+    const response = await ai.models.generateContent({
+        model: textModel,
+        contents: prompt,
+    });
+    return response.text.trim();
+  } catch (error) {
+      console.error("Translation failed, returning original text.", error);
+      return text; // Fallback to original text on error
+  }
+};
+
+
+export const generateOutfit = async (params: OutfitGenerationParams, locale: string): Promise<OutfitResult> => {
+  // Step 1: Generate a detailed text description of the outfit in English.
+  // The model works best with English prompts for this kind of creative generation.
   const descriptionPrompt = `
     You are a world-class fashion stylist. Based on the following criteria, create a detailed and appealing description for a complete outfit.
     Describe the main clothing items (top, bottom, outerwear), footwear, and at least two accessories.
@@ -25,14 +55,13 @@ export const generateOutfit = async (params: OutfitGenerationParams): Promise<Ou
     The description should be a single, well-written paragraph, perfect for feeding into an image generation model.
   `;
 
-  const textModel = 'gemini-2.5-flash';
   const textResponse = await ai.models.generateContent({
       model: textModel,
       contents: descriptionPrompt,
   });
-  const description = textResponse.text.trim();
+  let description = textResponse.text.trim();
 
-  // Step 2: Generate an image based on the created description.
+  // Step 2: Generate an image based on the English description.
   const imagePrompt = `
     Create a high-quality, photorealistic fashion photograph of a full outfit on a model, displayed from head to toe.
     The background should be a neutral, minimalist studio setting (e.g., light gray, off-white).
@@ -45,7 +74,6 @@ export const generateOutfit = async (params: OutfitGenerationParams): Promise<Ou
     Style the image like a modern fashion editorial. Do not add any text or logos to the image.
   `;
   
-  const imageModel = 'imagen-3.0-generate-002';
   const imageResponse = await ai.models.generateImages({
     model: imageModel,
     prompt: imagePrompt,
@@ -58,6 +86,11 @@ export const generateOutfit = async (params: OutfitGenerationParams): Promise<Ou
 
   if (!imageResponse.generatedImages || imageResponse.generatedImages.length === 0) {
     throw new Error("Image generation failed to produce an image.");
+  }
+
+  // Step 3: Translate the description if the locale is not English.
+  if (locale !== 'en') {
+      description = await translateText(description, locale);
   }
 
   const base64ImageBytes: string = imageResponse.generatedImages[0].image.imageBytes;

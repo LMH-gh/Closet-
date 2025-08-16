@@ -1,0 +1,63 @@
+
+export const ru = {
+  header: {
+    title: "Дизайн одежды",
+    titleHighlight: "Второй пилот",
+    subtitle: "Ваш личный ИИ-стилист на любой случай",
+  },
+  controls: {
+    title: "Опишите Ваше Видение",
+    style: "Стиль одежды",
+    occasion: "Событие",
+    gender: "Пол",
+    keyGarment: "Ключевой предмет одежды",
+    keyGarmentPlaceholder: "напр., черная кожаная куртка",
+    colors: "Предпочитаемые цвета (необязательно)",
+    colorsPlaceholder: "напр., земные тона, пастель",
+    button: "Создать образ",
+    buttonLoading: "Создание...",
+  },
+  results: {
+    initialTitle: "Ваш образ ждет",
+    initialMessage: "Заполните данные слева, и ИИ создаст ваш идеальный образ.",
+    title: "Анализ стиля",
+    error: "Не удалось создать образ. Модель может быть занята. Пожалуйста, попробуйте позже.",
+  },
+  loading: {
+    title: "Подбираем ваш образ...",
+    message: "Наш ИИ-стилист подбирает и сочетает вещи для создания идеального образа. Это может занять некоторое время.",
+  },
+  styles: {
+    Casual: "Повседневный",
+    Formal: "Официальный",
+    Streetwear: "Уличный стиль",
+    Vintage: "Винтаж",
+    Bohemian: "Богемный",
+    Minimalist: "Минимализм",
+    Sporty: "Спортивный",
+    BusinessCasual: "Деловой повседневный",
+  },
+  occasions: {
+    DailyWear: "На каждый день",
+    OfficeWork: "Офис / Работа",
+    EveningParty: "Вечеринка",
+    WeddingGuest: "Гость на свадьбе",
+    Vacation: "Отпуск",
+    WorkoutGym: "Тренировка / Спортзал",
+    FormalEvent: "Официальное мероприятие",
+  },
+  genders: {
+    Female: "Женский",
+    Male: "Мужской",
+    Unisex: "Унисекс",
+  },
+  languages: {
+    english: "Английский",
+    chinese: "Китайский",
+    french: "Французский",
+    german: "Немецкий",
+    japanese: "Японский",
+    korean: "Корейский",
+    russian: "Русский",
+  }
+};

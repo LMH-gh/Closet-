@@ -1,0 +1,63 @@
+
+export const zh = {
+  header: {
+    title: "时尚设计",
+    titleHighlight: "副驾",
+    subtitle: "适用于任何场合的个人 AI 造型师",
+  },
+  controls: {
+    title: "描述您的愿景",
+    style: "时尚风格",
+    occasion: "场合",
+    gender: "性别",
+    keyGarment: "关键服装或物品",
+    keyGarmentPlaceholder: "例如，黑色皮夹克",
+    colors: "首选颜色（可选）",
+    colorsPlaceholder: "例如，大地色、柔和色",
+    button: "生成穿搭",
+    buttonLoading: "设计中...",
+  },
+  results: {
+    initialTitle: "您的穿搭等待生成",
+    initialMessage: "请在左侧填写详细信息，让 AI 为您打造完美造型。",
+    title: "风格解析",
+    error: "生成穿搭失败。模型可能正忙。请稍后再试。",
+  },
+  loading: {
+    title: "正在策划您的造型...",
+    message: "我们的 AI 造型师正在混合搭配，打造完美的穿搭。这可能需要一些时间。",
+  },
+  styles: {
+    Casual: "休闲",
+    Formal: "正式",
+    Streetwear: "街头",
+    Vintage: "复古",
+    Bohemian: "波西米亚",
+    Minimalist: "简约",
+    Sporty: "运动",
+    BusinessCasual: "商务休闲",
+  },
+  occasions: {
+    DailyWear: "日常穿着",
+    OfficeWork: "办公室/工作",
+    EveningParty: "晚宴",
+    WeddingGuest: "婚礼嘉宾",
+    Vacation: "度假",
+    WorkoutGym: "健身/运动",
+    FormalEvent: "正式活动",
+  },
+  genders: {
+    Female: "女",
+    Male: "男",
+    Unisex: "男女通用",
+  },
+  languages: {
+    english: "英语",
+    chinese: "中文",
+    french: "法语",
+    german: "德语",
+    japanese: "日语",
+    korean: "韩语",
+    russian: "俄语",
+  }
+};

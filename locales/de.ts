@@ -1,0 +1,63 @@
+
+export const de = {
+  header: {
+    title: "Modedesign",
+    titleHighlight: "Co-Pilot",
+    subtitle: "Ihr persönlicher KI-Stylist für jeden Anlass",
+  },
+  controls: {
+    title: "Beschreiben Sie Ihre Vision",
+    style: "Modestil",
+    occasion: "Anlass",
+    gender: "Geschlecht",
+    keyGarment: "Schlüsselkleidungsstück",
+    keyGarmentPlaceholder: "z.B. schwarze Lederjacke",
+    colors: "Bevorzugte Farben (Optional)",
+    colorsPlaceholder: "z.B. Erdtöne, Pastellfarben",
+    button: "Outfit Generieren",
+    buttonLoading: "Entwerfen...",
+  },
+  results: {
+    initialTitle: "Ihr Outfit wartet",
+    initialMessage: "Füllen Sie die Details auf der linken Seite aus und lassen Sie die KI Ihren perfekten Look erstellen.",
+    title: "Stilanalyse",
+    error: "Outfit konnte nicht generiert werden. Das Modell ist möglicherweise beschäftigt. Bitte versuchen Sie es später erneut.",
+  },
+  loading: {
+    title: "Ihr Look wird zusammengestellt...",
+    message: "Unser KI-Stylist kombiniert Kleidungsstücke, um das perfekte Outfit zu kreieren. Dies kann einen Moment dauern.",
+  },
+  styles: {
+    Casual: "Lässig",
+    Formal: "Formell",
+    Streetwear: "Streetwear",
+    Vintage: "Vintage",
+    Bohemian: "Boho",
+    Minimalist: "Minimalistisch",
+    Sporty: "Sportlich",
+    BusinessCasual: "Business Casual",
+  },
+  occasions: {
+    DailyWear: "Alltagskleidung",
+    OfficeWork: "Büro / Arbeit",
+    EveningParty: "Abendparty",
+    WeddingGuest: "Hochzeitsgast",
+    Vacation: "Urlaub",
+    WorkoutGym: "Training / Fitnessstudio",
+    FormalEvent: "Formelle Veranstaltung",
+  },
+  genders: {
+    Female: "Weiblich",
+    Male: "Männlich",
+    Unisex: "Unisex",
+  },
+  languages: {
+    english: "Englisch",
+    chinese: "Chinesisch",
+    french: "Französisch",
+    german: "Deutsch",
+    japanese: "Japanisch",
+    korean: "Koreanisch",
+    russian: "Russisch",
+  }
+};

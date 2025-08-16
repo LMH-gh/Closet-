@@ -1,0 +1,63 @@
+
+export const ko = {
+  header: {
+    title: "패션 디자인",
+    titleHighlight: "코파일럿",
+    subtitle: "어떤 상황에도 어울리는 당신의 개인 AI 스타일리스트",
+  },
+  controls: {
+    title: "당신의 비전을 설명하세요",
+    style: "패션 스타일",
+    occasion: "상황",
+    gender: "성별",
+    keyGarment: "핵심 의류 또는 아이템",
+    keyGarmentPlaceholder: "예: 검은색 가죽 재킷",
+    colors: "선호하는 색상 (선택 사항)",
+    colorsPlaceholder: "예: 어스 톤, 파스텔",
+    button: "의상 생성",
+    buttonLoading: "디자인 중...",
+  },
+  results: {
+    initialTitle: "당신의 의상을 기다립니다",
+    initialMessage: "왼쪽에 세부 정보를 입력하고 AI가 완벽한 룩을 만들도록 하세요.",
+    title: "스타일 분석",
+    error: "의상을 생성하지 못했습니다. 모델이 사용 중일 수 있습니다. 나중에 다시 시도해 주세요.",
+  },
+  loading: {
+    title: "당신의 룩을 만들고 있습니다...",
+    message: "AI 스타일리스트가 완벽한 의상을 만들기 위해 아이템을 조합하고 있습니다. 잠시만 기다려 주세요.",
+  },
+  styles: {
+    Casual: "캐주얼",
+    Formal: "포멀",
+    Streetwear: "스트리트웨어",
+    Vintage: "빈티지",
+    Bohemian: "보헤미안",
+    Minimalist: "미니멀리스트",
+    Sporty: "스포티",
+    BusinessCasual: "비즈니스 캐주얼",
+  },
+  occasions: {
+    DailyWear: "일상복",
+    OfficeWork: "사무실/업무",
+    EveningParty: "저녁 파티",
+    WeddingGuest: "결혼식 하객",
+    Vacation: "휴가",
+    WorkoutGym: "운동/헬스장",
+    FormalEvent: "공식 행사",
+  },
+  genders: {
+    Female: "여성",
+    Male: "남성",
+    Unisex: "남녀 공용",
+  },
+  languages: {
+    english: "영어",
+    chinese: "중국어",
+    french: "프랑스어",
+    german: "독일어",
+    japanese: "일본어",
+    korean: "한국어",
+    russian: "러시아어",
+  }
+};

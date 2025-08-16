@@ -1,0 +1,63 @@
+
+export const ja = {
+  header: {
+    title: "ファッションデザイン",
+    titleHighlight: "コ・パイロット",
+    subtitle: "あらゆる機会に対応する、あなただけのAIスタイリスト",
+  },
+  controls: {
+    title: "ビジョンを描写する",
+    style: "ファッションスタイル",
+    occasion: "場面",
+    gender: "性別",
+    keyGarment: "キーとなる衣服",
+    keyGarmentPlaceholder: "例：黒のレザージャケット",
+    colors: "希望の色（任意）",
+    colorsPlaceholder: "例：アースカラー、パステル",
+    button: "コーディネートを生成",
+    buttonLoading: "デザイン中...",
+  },
+  results: {
+    initialTitle: "あなたのコーディネート",
+    initialMessage: "左の詳細を入力して、AIに完璧なルックを作成させましょう。",
+    title: "スタイル分析",
+    error: "コーディネートの生成に失敗しました。モデルがビジー状態の可能性があります。後でもう一度お試しください。",
+  },
+  loading: {
+    title: "あなたのルックを作成中...",
+    message: "AIスタイリストが完璧なコーディネートを作成するためにアイテムを組み合わせています。少々お待ちください。",
+  },
+  styles: {
+    Casual: "カジュアル",
+    Formal: "フォーマル",
+    Streetwear: "ストリートウェア",
+    Vintage: "ヴィンテージ",
+    Bohemian: "ボヘミアン",
+    Minimalist: "ミニマリスト",
+    Sporty: "スポーティー",
+    BusinessCasual: "ビジネスカジュアル",
+  },
+  occasions: {
+    DailyWear: "普段着",
+    OfficeWork: "オフィス／仕事",
+    EveningParty: "イブニングパーティー",
+    WeddingGuest: "結婚式のゲスト",
+    Vacation: "休暇",
+    WorkoutGym: "トレーニング／ジム",
+    FormalEvent: "フォーマルなイベント",
+  },
+  genders: {
+    Female: "女性",
+    Male: "男性",
+    Unisex: "ユニセックス",
+  },
+  languages: {
+    english: "英語",
+    chinese: "中国語",
+    french: "フランス語",
+    german: "ドイツ語",
+    japanese: "日本語",
+    korean: "韓国語",
+    russian: "ロシア語",
+  }
+};

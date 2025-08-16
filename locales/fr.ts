@@ -1,0 +1,63 @@
+
+export const fr = {
+  header: {
+    title: "Design de Mode",
+    titleHighlight: "Co-pilote",
+    subtitle: "Votre styliste personnel IA pour toute occasion",
+  },
+  controls: {
+    title: "Décrivez Votre Vision",
+    style: "Style de Mode",
+    occasion: "Occasion",
+    gender: "Genre",
+    keyGarment: "Vêtement ou Article Clé",
+    keyGarmentPlaceholder: "ex: veste en cuir noir",
+    colors: "Couleurs Préférées (Optionnel)",
+    colorsPlaceholder: "ex: tons terreux, pastels",
+    button: "Générer la Tenue",
+    buttonLoading: "Création...",
+  },
+  results: {
+    initialTitle: "Votre Tenue Attend",
+    initialMessage: "Remplissez les détails à gauche et laissez l'IA créer votre look parfait.",
+    title: "Analyse du Style",
+    error: "Échec de la génération de la tenue. Le modèle est peut-être occupé. Veuillez réessayer plus tard.",
+  },
+  loading: {
+    title: "Préparation de Votre Look...",
+    message: "Notre styliste IA mélange et assortit les pièces pour créer la tenue parfaite. Cela peut prendre un moment.",
+  },
+  styles: {
+    Casual: "Décontracté",
+    Formal: "Formel",
+    Streetwear: "Streetwear",
+    Vintage: "Vintage",
+    Bohemian: "Bohème",
+    Minimalist: "Minimaliste",
+    Sporty: "Sportif",
+    BusinessCasual: "Décontracté Chic",
+  },
+  occasions: {
+    DailyWear: "Tenue de Tous les Jours",
+    OfficeWork: "Bureau / Travail",
+    EveningParty: "Soirée",
+    WeddingGuest: "Invité de Mariage",
+    Vacation: "Vacances",
+    WorkoutGym: "Entraînement / Salle de Sport",
+    FormalEvent: "Événement Formel",
+  },
+  genders: {
+    Female: "Femme",
+    Male: "Homme",
+    Unisex: "Unisexe",
+  },
+  languages: {
+    english: "Anglais",
+    chinese: "Chinois",
+    french: "Français",
+    german: "Allemand",
+    japanese: "Japonais",
+    korean: "Coréen",
+    russian: "Russe",
+  }
+};

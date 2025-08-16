@@ -1,0 +1,63 @@
+
+export const en = {
+  header: {
+    title: "Fashion Design",
+    titleHighlight: "Co-pilot",
+    subtitle: "Your personal AI stylist for any occasion",
+  },
+  controls: {
+    title: "Describe Your Vision",
+    style: "Fashion Style",
+    occasion: "Occasion",
+    gender: "Gender",
+    keyGarment: "Key Garment or Item",
+    keyGarmentPlaceholder: "e.g., black leather jacket",
+    colors: "Preferred Colors (Optional)",
+    colorsPlaceholder: "e.g., earthy tones, pastels",
+    button: "Generate Outfit",
+    buttonLoading: "Designing...",
+  },
+  results: {
+    initialTitle: "Your Outfit Awaits",
+    initialMessage: "Fill in the details on the left and let AI create your perfect look.",
+    title: "Style Breakdown",
+    error: "Failed to generate outfit. The model may be busy. Please try again later.",
+  },
+  loading: {
+    title: "Curating Your Look...",
+    message: "Our AI stylist is mixing and matching pieces to create the perfect outfit. This may take a moment.",
+  },
+  styles: {
+    Casual: "Casual",
+    Formal: "Formal",
+    Streetwear: "Streetwear",
+    Vintage: "Vintage",
+    Bohemian: "Bohemian",
+    Minimalist: "Minimalist",
+    Sporty: "Sporty",
+    BusinessCasual: "Business Casual",
+  },
+  occasions: {
+    DailyWear: "Daily Wear",
+    OfficeWork: "Office / Work",
+    EveningParty: "Evening Party",
+    WeddingGuest: "Wedding Guest",
+    Vacation: "Vacation",
+    WorkoutGym: "Workout / Gym",
+    FormalEvent: "Formal Event",
+  },
+  genders: {
+    Female: "Female",
+    Male: "Male",
+    Unisex: "Unisex",
+  },
+  languages: {
+    english: "English",
+    chinese: "Chinese",
+    french: "French",
+    german: "German",
+    japanese: "Japanese",
+    korean: "Korean",
+    russian: "Russian",
+  }
+};
