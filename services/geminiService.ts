@@ -77,15 +77,18 @@ export const generateOutfit = async (params: OutfitGenerationParams, locale: str
   const modelEthnicity = getModelEthnicity(locale);
 
   const modelImagePrompt = `
-    Create a high-quality, photorealistic fashion photograph of a full outfit on ${modelEthnicity}, displayed from head to toe.
-    The background should be a neutral, minimalist studio setting (e.g., light gray, off-white).
+    Create a high-quality, photorealistic photograph of a goodlooking model WEARING a complete outfit.
+    It is crucial that the model is visible and wearing the clothes. Do not generate an image of just the clothes laid out.
+    The model should be ${modelEthnicity} and displayed from head to toe to show the full look.
+    The model's pose should be natural, like in a high-end fashion catalog.
+    The background must be a clean, neutral, minimalist studio setting (e.g., light gray or off-white).
     The lighting should be soft and professional.
-    The model's face should be neutral or not prominently featured to focus on the clothes.
+    The model's face should be neutral or slightly obscured to keep the focus on the apparel.
 
     Outfit description:
     ${description}
 
-    Style the image like a modern fashion editorial. Do not add any text or logos to the image.
+    Style the final image like a modern fashion editorial. Do not include any text or logos.
   `;
 
   const itemsImagePrompt = `

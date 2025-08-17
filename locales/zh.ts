@@ -1,7 +1,7 @@
 export const zh = {
   header: {
     title: "每日穿搭",
-    titleHighlight: "副驾",
+    titleHighlight: "助手",
     subtitle: "适用于任何场合的个人 AI 造型师",
   },
   controls: {
