@@ -1,5 +1,5 @@
 {
-  "name": "Fashion Design Co-pilot",
+  "name": "OOTD Copilot",
   "description": "An AI-powered application that generates unique clothing combination suggestions and visual mockups based on user-selected styles, occasions, and other preferences. Leveraging a vast database of design concepts, it provides both descriptive advice and a visual sample for your next outfit.",
   "requestFramePermissions": []
 }

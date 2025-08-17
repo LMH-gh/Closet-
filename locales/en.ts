@@ -1,8 +1,7 @@
-
 export const en = {
   header: {
-    title: "Fashion Design",
-    titleHighlight: "Co-pilot",
+    title: "OOTD",
+    titleHighlight: "Copilot",
     subtitle: "Your personal AI stylist for any occasion",
   },
   controls: {
@@ -22,6 +21,8 @@ export const en = {
     initialMessage: "Fill in the details on the left and let AI create your perfect look.",
     title: "Style Breakdown",
     error: "Failed to generate outfit. The model may be busy. Please try again later.",
+    modelViewTitle: "Complete Look",
+    itemsViewTitle: "Outfit Items",
   },
   loading: {
     title: "Curating Your Look...",

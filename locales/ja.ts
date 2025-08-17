@@ -1,7 +1,6 @@
-
 export const ja = {
   header: {
-    title: "ファッションデザイン",
+    title: "今日のコーデ",
     titleHighlight: "コ・パイロット",
     subtitle: "あらゆる機会に対応する、あなただけのAIスタイリスト",
   },
@@ -22,6 +21,8 @@ export const ja = {
     initialMessage: "左の詳細を入力して、AIに完璧なルックを作成させましょう。",
     title: "スタイル分析",
     error: "コーディネートの生成に失敗しました。モデルがビジー状態の可能性があります。後でもう一度お試しください。",
+    modelViewTitle: "コンプリート・ルック",
+    itemsViewTitle: "コーディネートアイテム",
   },
   loading: {
     title: "あなたのルックを作成中...",

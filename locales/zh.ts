@@ -1,7 +1,6 @@
-
 export const zh = {
   header: {
-    title: "时尚设计",
+    title: "每日穿搭",
     titleHighlight: "副驾",
     subtitle: "适用于任何场合的个人 AI 造型师",
   },
@@ -22,6 +21,8 @@ export const zh = {
     initialMessage: "请在左侧填写详细信息，让 AI 为您打造完美造型。",
     title: "风格解析",
     error: "生成穿搭失败。模型可能正忙。请稍后再试。",
+    modelViewTitle: "模特穿搭",
+    itemsViewTitle: "单品展示",
   },
   loading: {
     title: "正在策划您的造型...",

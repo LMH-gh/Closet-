@@ -1,7 +1,6 @@
-
 export const fr = {
   header: {
-    title: "Design de Mode",
+    title: "Tenue du Jour",
     titleHighlight: "Co-pilote",
     subtitle: "Votre styliste personnel IA pour toute occasion",
   },
@@ -22,6 +21,8 @@ export const fr = {
     initialMessage: "Remplissez les détails à gauche et laissez l'IA créer votre look parfait.",
     title: "Analyse du Style",
     error: "Échec de la génération de la tenue. Le modèle est peut-être occupé. Veuillez réessayer plus tard.",
+    modelViewTitle: "Look Complet",
+    itemsViewTitle: "Articles de la Tenue",
   },
   loading: {
     title: "Préparation de Votre Look...",

@@ -1,7 +1,6 @@
-
 export const de = {
   header: {
-    title: "Modedesign",
+    title: "OOTD",
     titleHighlight: "Co-Pilot",
     subtitle: "Ihr persönlicher KI-Stylist für jeden Anlass",
   },
@@ -22,6 +21,8 @@ export const de = {
     initialMessage: "Füllen Sie die Details auf der linken Seite aus und lassen Sie die KI Ihren perfekten Look erstellen.",
     title: "Stilanalyse",
     error: "Outfit konnte nicht generiert werden. Das Modell ist möglicherweise beschäftigt. Bitte versuchen Sie es später erneut.",
+    modelViewTitle: "Kompletter Look",
+    itemsViewTitle: "Outfit-Artikel",
   },
   loading: {
     title: "Ihr Look wird zusammengestellt...",

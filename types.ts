@@ -9,7 +9,8 @@ export interface OutfitGenerationParams {
 
 export interface OutfitResult {
   description: string;
-  imageUrl: string;
+  modelImageUrl: string;
+  itemsImageUrl: string;
 }
 
 export interface SelectorOption {

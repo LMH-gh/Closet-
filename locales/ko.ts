@@ -1,7 +1,6 @@
-
 export const ko = {
   header: {
-    title: "패션 디자인",
+    title: "OOTD",
     titleHighlight: "코파일럿",
     subtitle: "어떤 상황에도 어울리는 당신의 개인 AI 스타일리스트",
   },
@@ -22,6 +21,8 @@ export const ko = {
     initialMessage: "왼쪽에 세부 정보를 입력하고 AI가 완벽한 룩을 만들도록 하세요.",
     title: "스타일 분석",
     error: "의상을 생성하지 못했습니다. 모델이 사용 중일 수 있습니다. 나중에 다시 시도해 주세요.",
+    modelViewTitle: "전체 룩",
+    itemsViewTitle: "의상 아이템",
   },
   loading: {
     title: "당신의 룩을 만들고 있습니다...",
