@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { GENDER_KEYS, OCCASION_KEYS, STYLE_KEYS } from './constants';
+import { GENDER_KEYS, OCCASION_KEYS, STYLE_KEYS, KEY_GARMENT_KEYS } from './constants';
 import type { OutfitGenerationParams, OutfitResult, SelectorOption } from './types';
 import { generateOutfit } from './services/geminiService';
 import Selector from './components/Selector';
@@ -7,6 +7,7 @@ import ResultDisplay from './components/ResultDisplay';
 import LoadingSpinner from './components/LoadingSpinner';
 import { useLanguage } from './contexts/LanguageContext';
 import LanguageSelector from './components/LanguageSelector';
+import { en as enLocale } from './locales/en';
 
 const App: React.FC = () => {
   const { t, locale } = useLanguage();
@@ -22,11 +23,16 @@ const App: React.FC = () => {
   const GENDERS: SelectorOption[] = useMemo(() => GENDER_KEYS.map(key => ({
     label: t(`genders.${key}`), value: key
   })), [t]);
+
+  const KEY_GARMENTS: SelectorOption[] = useMemo(() => KEY_GARMENT_KEYS.map(key => ({
+    label: t(`keyGarments.${key}`), value: key
+  })), [t]);
   
   const [style, setStyle] = useState<string>(STYLE_KEYS[0]);
   const [occasion, setOccasion] = useState<string>(OCCASION_KEYS[0]);
   const [gender, setGender] = useState<string>(GENDER_KEYS[0]);
-  const [keyGarment, setKeyGarment] = useState<string>('');
+  const [keyGarmentSelection, setKeyGarmentSelection] = useState<string>(KEY_GARMENT_KEYS[0]);
+  const [customKeyGarment, setCustomKeyGarment] = useState<string>('');
   const [colorPalette, setColorPalette] = useState<string>('');
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -37,6 +43,16 @@ const App: React.FC = () => {
     setIsLoading(true);
     setError(null);
     setResult(null);
+
+    const getGarmentInEnglish = (selection: string): string => {
+      if (selection === 'None' || selection === 'Other') return '';
+      const garments = enLocale.keyGarments as Record<string, string>;
+      return garments[selection] || selection;
+    };
+    
+    const keyGarment = keyGarmentSelection === 'Other' 
+      ? customKeyGarment 
+      : getGarmentInEnglish(keyGarmentSelection);
 
     const params: OutfitGenerationParams = {
       style,
@@ -55,7 +71,7 @@ const App: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  }, [style, occasion, gender, keyGarment, colorPalette, locale, t]);
+  }, [style, occasion, gender, keyGarmentSelection, customKeyGarment, colorPalette, locale, t]);
 
   return (
     <div className="min-h-screen bg-slate-100 text-slate-900 font-sans">
@@ -83,17 +99,30 @@ const App: React.FC = () => {
               <Selector label={t('controls.gender')} value={gender} onChange={(e) => setGender(e.target.value)} options={GENDERS} />
 
               <div>
-                <label htmlFor="keyGarment" className="block text-sm font-semibold text-slate-600 mb-2">
-                  {t('controls.keyGarment')}
-                </label>
-                <input
-                  type="text"
-                  id="keyGarment"
-                  value={keyGarment}
-                  onChange={(e) => setKeyGarment(e.target.value)}
-                  placeholder={t('controls.keyGarmentPlaceholder')}
-                  className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-violet-400 focus:border-transparent transition duration-300 ease-in-out"
+                <Selector 
+                  label={t('controls.keyGarment')} 
+                  value={keyGarmentSelection} 
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setKeyGarmentSelection(value);
+                    if (value !== 'Other') {
+                      setCustomKeyGarment('');
+                    }
+                  }} 
+                  options={KEY_GARMENTS} 
                 />
+                {keyGarmentSelection === 'Other' && (
+                  <div className="mt-2">
+                    <input
+                      type="text"
+                      id="customKeyGarment"
+                      value={customKeyGarment}
+                      onChange={(e) => setCustomKeyGarment(e.target.value)}
+                      placeholder={t('controls.keyGarmentPlaceholder')}
+                      className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg shadow-sm focus:ring-2 focus:ring-violet-400 focus:border-transparent transition duration-300 ease-in-out"
+                    />
+                  </div>
+                )}
               </div>
 
               <div>
