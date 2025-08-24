@@ -4,6 +4,7 @@ export interface OutfitGenerationParams {
   occasion: string;
   gender: string;
   keyGarment: string;
+  keyAccessory: string;
   colorPalette: string;
 }
 

@@ -62,6 +62,7 @@ export const generateOutfit = async (params: OutfitGenerationParams, locale: str
     - Occasion: ${params.occasion}
     - Gender: ${params.gender}
     - Key Garment to build around: ${params.keyGarment || 'None specified'}
+    - Key Accessory to feature: ${params.keyAccessory || 'None specified'}
     - Preferred Color Palette: ${params.colorPalette || 'Any suitable colors'}
 
     The description should be a single, well-written paragraph, perfect for feeding into an image generation model.

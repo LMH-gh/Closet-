@@ -26,13 +26,26 @@ export const GENDER_KEYS = [
   'Unisex',
 ];
 
-export const KEY_GARMENT_KEYS = [
-  'None',
-  'LeatherJacket',
-  'DenimJeans',
-  'WhiteTShirt',
-  'LittleBlackDress',
-  'Blazer',
-  'TrenchCoat',
-  'Other'
-];
+export const GARMENT_KEYS = {
+  Female: [
+    'None', 'LittleBlackDress', 'Sundress', 'Blouse', 'Skirt', 'CropTop', 'HighWaistedJeans', 'Blazer', 'TrenchCoat', 'Other'
+  ],
+  Male: [
+    'None', 'ButtonUpShirt', 'PoloShirt', 'Sweater', 'Chinos', 'DenimJeans', 'Blazer', 'BomberJacket', 'Other'
+  ],
+  Unisex: [
+    'None', 'WhiteTShirt', 'DenimJeans', 'Hoodie', 'LeatherJacket', 'TrenchCoat', 'Blazer', 'Other'
+  ],
+};
+
+export const ACCESSORY_KEYS = {
+  Female: [
+    'None', 'Handbag', 'Necklace', 'Earrings', 'Scarf', 'Sunglasses', 'HighHeels', 'AnkleBoots', 'Other'
+  ],
+  Male: [
+    'None', 'Watch', 'Tie', 'Belt', 'Sunglasses', 'Backpack', 'Sneakers', 'Loafers', 'Other'
+  ],
+  Unisex: [
+    'None', 'Sunglasses', 'Beanie', 'Backpack', 'Sneakers', 'Watch', 'Scarf', 'Other'
+  ],
+};
